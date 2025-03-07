@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITW Projekt 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+
+        // Smooth scrolling
+        function goTo(id) {
+            let destination = document.querySelector(id);
+            let yCoord = destination.offsetTop - 100;
+            window.scrollTo({
+                top: yCoord,
+                behavior: "smooth"
+            });
+        }
+
+        // Elements with the 'reveal' class will have this function called on them
+        window.addEventListener('scroll', reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var revealTop = reveals[i].getBoundingClientRect().top
+                var revealPoint = 0;
+
+                if(revealTop < window.innerHeight - revealPoint){
+                    reveals[i].classList.add('revealed')
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <!-- Tenhle komentar pisu pro prehlednost cesky: Dopredu se omlouvam na tu neresponsivni nagivaci (pri male sirce okna), bylo to to posledni, co mi zbyvalo dodelat a vzhledem k navrhu se mi to moc nedarilo a nakonec uz mi na to uz nezbyl cas. Snad se zbytek stranky bude libit i tak :) -->
+    <nav id="topnav" class="nav">
+        <div class="wrapper">
+            <ul>
+                <li><a href="https://www.stud.fit.vutbr.cz/~xpauli08/">Goodman & Associates</a></li>
+                <li><div class="link" onclick="goTo('#about-me')"><a>About</a></div></li>
+                <li class="dropdown">
+                    <div class="link" onclick="goTo('#services')"><a>Services</a></div>
+                    <div class="dropdown-content">
+                        <div class="link" onclick="goTo('#criminal-defense-law')"><a>Criminal Defense Law</a></div>
+                        <div class="link" onclick="goTo('#business-consulting')"><a>Business Consulting</a></div>
+                        <div class="link" onclick="goTo('#subscriptions')"><a>Subscriptions</a></div>
+                    </div>
+                </li>
+                <li><div class="link" onclick="goTo('#client-reviews')"><a>Clients</a></div></li>
+                <li><div class="link" onclick="goTo('#contact')"><a>Contact</a></div></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Image + text under the navbar -->
+    <header>
+        <div class="wrapper title">           
+            <div>
+                <h1>Hi, I’m Saul Goodman.</h1>
+                <p>Did you know that you have rights?<br>The constitution says you do! And so do I.</p>
+            </div>
+            <div>
+                <img src="img/saul_goodman_main_image_transparent.png" alt="">
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main body -->
+    <main>
+        <div class="wrapper">
+
+            <section id="about-me">
+                <div class="section-title">
+                    <h2>ABOUT ME</h2>
+                </div>
+                <div class="section-content">
+                    <div>
+                        <img src="img/pink_saul.png" alt="">
+                        <p>
+                            I'm not one to brag, but if you're looking for a lawyer who knows how to get the job done, you've come to the right place. Let me tell you a little bit about myself:
+                            <br><br>
+                            I was born and raised in the great state of Illinois, where I attended the University of American Samoa School of Law (a fine institution, I assure you). From there, I moved out to Albuquerque, New Mexico, where I've been practicing law for over a decade.
+                            <br><br>
+                            I specialize in criminal defense, but I'm also well-versed in personal injury, wrongful death, and other areas of law. I pride myself on being a true advocate for my clients, no matter what their legal troubles may be.
+                            <br><br>
+                            Some might call me a "sleazy lawyer," but I prefer to think of myself as a creative problem solver. My unorthodox tactics have helped me win cases that other lawyers might have given up on.
+                            <br><br>
+                            If you're looking for a lawyer who will fight for you tooth and nail, look no further. I may not have the fanciest office or the most prestigious credentials, but I can promise you this: I'll do everything in my power to make sure you get the justice you deserve. So what are you waiting for? Checkout my offers below!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="services">
+                <div class="section-title">
+                    <h2>SERVICES</h2>
+                </div>
+                <section id="criminal-defense-law" class="reveal">
+                    <h3>Criminal Defense Law</h3>
+                    <p>
+                        I believe that until proven guilty, every man, woman, 
+                        and child in this country is innocent.<br>
+                        And that's why I fight for you, Albuquerque!
+                    </p>
+                    <div class="section-content">
+                        <div>
+                            <img src="img/lalo_saul.png" alt="">
+                            <p>If you are committed enough, you can make any story work.</p>
+                        </div>
+                        <div>
+                            <img src="img/saul_skyler.png" alt="">
+                            <p>I once told a woman I was Kevin Costner, and it worked because I believed it.</p>
+                        </div>
+                        <div>
+                            <img src="img/drunk_driving.png" alt="">
+                            <p>Remebmer, don't drink and drive, but if you do, call me.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="business-consulting" class="reveal">
+                    <h3>Business consulting</h3>
+
+                    <div class="section-content">
+                        <div>
+                            <img src="img/walter_saul_handshake.png" alt="">
+                            <p>
+                                Looking for top-notch business consulting services? Look no further! With over a decade of experience in the legal and financial industries, I have the skills and expertise needed to help take your business to the next level.
+                                <br>
+                                <br>
+                                Whether you're a small business owner looking to increase your profits, or a large corporation in need of strategic planning and guidance, I have the knowledge and know-how to get the job done. I've helped countless clients across a range of industries achieve success, and I'm confident that I can do the same for you!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="subscriptions" class="reveal">
+                    <h3>Subscriptions</h3>
+                    <p>
+                        Welcome to the Saul Goodman Business Consulting Subscriptions!<br>I offer three tiers of services to help you protect and grow your criminal enterprise.
+                        <br>Choose the tier that best fits your needs and start enjoying the benefits of my expertise today!
+                    </p>
+
+                    <div class="section-content">
+                        <div class="subscription-card">
+                            <h4>Petty Thief</h4>
+                            <p>Perfect for those just dipping their<br>toes into the criminal underworld.</p>
+                            <div class="price-area">
+                                <span>$99.99</span>
+                                <span>/month</span>
+                            </div>
+                            <button>Add to Cart</button>
+                            <ul>
+                                <li>One free consultation per month</li>
+                                <li>First monthly trial costs 50% less</li>
+                                <li>Unique Better Call Saul key tag</li>
+                            </ul>
+                        </div>
+                        <div class="subscription-card">
+                            <h4>Smooth Operator</h4>
+                            <p>Designed for savvy criminals who<br>know how to get things done.</p>
+                            <div class="price-area">
+                                <span>$249.99</span>
+                                <span>/month</span>
+                            </div>
+                            <button>Add to Cart</button>
+                            <ul>
+                                <li>All of the Petty Thief benefits</li>
+                                <li>Five free monthly trials</li>
+                                <li>Assistance with structuring your enterprise to minimize legal risk</li>
+                                <li>Unique Better Call Saul T-shirt</li>
+                            </ul>
+                        </div>
+                        <div class="subscription-card">
+                            <h4>Criminal Mastermind</h4>
+                            <p>For the crème de la crème of<br>criminal masterminds.</p>
+                            <div class="price-area">
+                                <span>$499.99</span>
+                                <span>/month</span>
+                            </div>
+                            <button>Add to Cart</button>
+                            <ul>
+                                <li>All of the Smooth Operator benefits</li>
+                                <li>Assistance with scaling your criminal enterprise</li>
+                                <li>Price of money laundering cut in half</li>
+                                <li>Emergency free consultations 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+            <section id="client-reviews">
+                <div class="section-title">
+                    <h2>CLIENT REVIEWS</h2>
+                    <p>
+                        See what my satisfied clients have to say about the quality and effectiveness of my services.
+                        <br>Read real reviews from former clients and discover how I can help you build a thriving criminal enterprise.
+                    </p>
+                </div>
+                <div class="section-content">
+                    <div class="reveal">
+                        <img src="img/walter_client.png" alt="">
+                        <div>
+                            <p>I couldn't have built my empire without Saul by my side. His expertise in business consulting and legal maneuvering was invaluable. With Saul in your corner, you'll have the knowledge and resources you need to succeed.</p>
+                            <h4>Walter White</h4>
+                            <p>Succesfull businessman</p>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <img src="img/mike_client.png" alt="">
+                        <div>
+                            <p>Saul was my go-to guy for all things shady. He never let me down, always had a solution to any problem, and kept me out of jail more times than I care to admit. He's the best in the business, and I wouldn't trust anyone else to handle my affairs.</p>
+                            <h4>Mike Ehrmantraut</h4>
+                            <p>Retired hitman</p>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <img src="img/jesse_client.png" alt="">
+                        <div>
+                            <p>Saul's the man, plain and simple. He helped me set up my own business and provided me with all the legal and financial advice I needed to get it off the ground. I wouldn't be where I am today without him, and I'll always be grateful for his help.</p>
+                            <h4>Jesse Pinkmen</h4>
+                            <p>Meth cook</p>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <img src="img/tuco_client.png" alt="">
+                        <div>
+                            <p>Saul's the man, yo! He knows his stuff inside and out, and he's always looking out for his clients. With Saul in your corner, you can take on anyone and come out on top. He's the real deal, and I wouldn't trust anyone else with my business.</p>
+                            <h4>Tuco Salamanca</h4>
+                            <p>Head of the Salamanca cartel</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="wrapper">
+                    <div class="section-title">
+                        <h2>CONTACT</h2>
+                        <p>Need to get in touch with me? No problem, I'm always available.
+                            <br>Whether you're a first-time client or a long-time associate, I'm here to help.
+                            <br>You can reach me by phone, email, or even drop by my office for a face-to-face consultation. Let's talk business.
+                        </p>
+                    </div>
+                    <div class="section-content reveal">
+                        <form>
+                            <input type="text" id="fname" name="firstname" placeholder="First name">
+                            <input type="text" id="lname" name="lastname" placeholder="Last name">
+                            <input type="text" id="email" name="email" placeholder="Email">
+                            <textarea id="text" name="text" placeholder="Write me something.."></textarea>
+                        
+                            <input type="submit" value="Send">
+                        
+                          </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
