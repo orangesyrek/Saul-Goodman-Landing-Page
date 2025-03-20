@@ -1,0 +1,2 @@
+# Projekt do předmětu ITW - Tvorba webových stránek
+Předmět je volitelnou součástí bakalářského studia na Fakultě informačních technologií Vysokého učení technického v Brně. Zadání projektu již bohužel nemám k dispozici, ale cílem bylo mimo jiné vytvořit a nastylovat např. landing page pro nějaký smyšlený business nebo vlastní portfolio. Součástí byly také podmínky, jako dropdown v navigaci stránky, nějaký základní JavaScript. Náhled mnou vytvořené stránky je k dispozici [na této stránce](https://orangesyrek.github.io/Saul-Goodman-Landing-Page/).
